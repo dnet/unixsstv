@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 int gen_samples(int bits_per_sample) {
 	double max_value = 1 << bits_per_sample;
 	double alias = 1.0 / max_value;
-	double amp = max_value / 0.2;
+	double amp = max_value / 2.0;
 	double lowest = -amp;
 	double highest = amp - 1.0;
 	double alias_cache[ALIAS_SIZE];
