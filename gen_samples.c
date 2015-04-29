@@ -13,10 +13,10 @@ int main(int argc, char **argv) {
 	exit(gen_samples(bits_per_sample));
 }
 
-int gen_samples(int bits_per_sample) {
-	double max_value = 1 << bits_per_sample;
-	double alias = 1.0 / max_value;
-	double amp = max_value / 2.0;
+int gen_samples(const int bits_per_sample) {
+	const double max_value = 1 << bits_per_sample;
+	const double alias = 1.0 / max_value;
+	const double amp = max_value / 2.0;
 	double lowest = -amp;
 	double highest = amp - 1.0;
 	double alias_cache[ALIAS_SIZE];
