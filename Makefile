@@ -1,4 +1,5 @@
 BINARIES=gen_samples gen_values
+CFLAGS+=-O2 -march=native
 LDFLAGS+=-lm
 
 all: $(BINARIES)
