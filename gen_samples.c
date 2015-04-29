@@ -4,6 +4,8 @@
 
 #define ALIAS_SIZE 1024
 
+int gen_samples(const int);
+
 int main(int argc, char **argv) {
 	if (argc < 2) {
 		fprintf(stderr, "Usage: %s <bits per sample>\n", argv[0]);
