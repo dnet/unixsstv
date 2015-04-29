@@ -17,10 +17,10 @@ int main(int argc, char **argv) {
 	exit(gen_values(samples_per_second));
 }
 
-int gen_values(int samples_per_second) {
-	double spms = ((double)samples_per_second) / 1000.0;
+int gen_values(const int samples_per_second) {
+	const double spms = ((double)samples_per_second) / 1000.0;
 	double offset = 0.0;
-	double factor = 2.0 * M_PI / ((double)samples_per_second);
+	const double factor = 2.0 * M_PI / ((double)samples_per_second);
 	double freq_factor;
 	double samples = 0.0;
 	freq_tuple_t input;
