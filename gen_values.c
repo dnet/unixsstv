@@ -8,6 +8,8 @@ typedef struct freq_tuple {
 	float msec;
 } freq_tuple_t;
 
+int gen_values(const int);
+
 int main(int argc, char **argv) {
 	if (argc < 2) {
 		fprintf(stderr, "Usage: %s <samples per second>\n", argv[0]);
