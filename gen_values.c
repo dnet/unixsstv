@@ -36,7 +36,7 @@ int gen_values(int samples_per_second) {
 				output = sinf(sample * freq_factor + offset);
 				fwrite(&output, sizeof(output), 1, stdout);
 			}
-			offset += sample * freq_factor;
+			offset += (sample + 1) * freq_factor;
 			samples -= tx;
 		}
 	}
